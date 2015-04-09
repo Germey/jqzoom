@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JQZoom放大镜</title>
+	<meta charset="utf-8">
+    <script src="js/jquery.min.js"></script>
+	<script src="js/jquery.jqzoom.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.jqzoom.css" />
+    <style type="text/css">
+           body{font-size:13px}
+           span{color:Red;font-size:12px}
+           .divFrame{width:260px;border:solid 1px #666}
+           .divFrame .divTitle{padding:5px;background-color:#eee;font-weight:bold}
+           .divFrame .divContent{padding:8px;line-height:1.6em}
+           .divFrame .divContent img{border:1px solid #ccc}
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            $("#jqzoom").jqzoom( //绑定图片放大插件jqzoom
+                 {
+                     zoomWidth: 230,
+                     zoomHeight: 230,
+                     position: 'right'
+                 }
+            );
+        });
+    </script>
+</head>
+<body>
+    <div class="divFrame">
+         <div class="divTitle">
+              图片放大镜
+         </div>
+         <div class="divContent">
+              <a href="images/bag.jpg" id="jqzoom" title="我的背包">
+		         <img src="images/bagsmall.jpg">
+              </a>
+         </div>
+    </div>
+</body>
+</html>
